@@ -6,6 +6,7 @@ export interface Restaurant {
   deliveryEstimate: string
   rating: number
   imagePath: string
+  about: string
 
   /* "id": "bread-bakery",
   "name": "Bread & Bakery",
