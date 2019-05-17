@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {RestaurantsService} from '../../restaurants/restaurants.service';
 import {ActivatedRoute} from '@angular/router'
 import { Review } from './review.model';
