@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {RestaurantsService} from '../../restaurants/restaurants.service';
 import {ActivatedRoute} from '@angular/router'
 import { Review } from './review.model';
@@ -9,7 +9,7 @@ import { Review } from './review.model';
 })
 export class ReviewsComponent implements OnInit {
 
-  reviews: Review
+  @Input() reviews: Review
 
   constructor(private restaurantsServices: RestaurantsService, private route: ActivatedRoute) { }
 
