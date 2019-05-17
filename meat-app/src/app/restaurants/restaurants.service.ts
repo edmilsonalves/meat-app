@@ -8,6 +8,7 @@ import 'rxjs/add/operator/catch'
 
 import {Restaurant} from './restaurant/restaurant.model'
 import {ErrorHandler} from '../app.error-handler'
+import { Review } from '../restaurant-detail/reviews/review.model';
 
 
 
@@ -26,6 +27,12 @@ export class RestaurantsService{
     return this.http.get(`${MEAT_API}/restaurants/${id}`)
     .map(response => response.json())
     .catch(ErrorHandler.handleError)
+  }
+
+  reviewsOfRestaurant(id: string): Observable<Review>{
+    return this.http.get(`${MEAT_API}/restaurants/${id}/reviews`)
+      .map(response => response.json())
+      .catch(ErrorHandler.handleError)
   }
 
 }
